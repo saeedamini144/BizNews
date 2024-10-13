@@ -60,15 +60,38 @@ $options = array(
     ),
     'Home Edite' => array(
         'title' =>  __('Home Edit', '{domain}'),
+
         'options' => array(
             'first_section' => array(
-                'title' => __('test', '{domain}'),
+                'title' => __('First Section', '{domain}'),
                 'options' => array(
-                    'first_section_title' => array(
-                        'label' => 'Change The main title',
-                        'type' => 'text',
-                        'value' => 'We Help you to improve your business',
-                        'desc' => 'Write your header title here'
+
+                    'Main_slider' => array(
+                        'label' => 'Change the Main Slider Content',
+                        'type' => 'multi-select',
+                        'desc' => 'Choose the categories',
+                        'population' => 'taxonomy', // type of the content
+                        'source' => 'category', //categorie
+                        'limit' => 100,
+                    ),
+
+                    'Main_slider_GridCard' => array(
+                        'label' => ' Change the Main Slider Grid content ',
+                        'type' => 'multi-select',
+                        'desc' => 'Choose the categories',
+                        'population' => 'taxonomy',
+                        'source' => 'category',
+                        'limit' => 100,
+                    ),
+
+                    'Breaking_news' => array(
+
+                        'label' => 'Choose the Breaking News',
+                        'type' => 'multi-select',
+                        'desc' => 'Choose category for the Breaking News',
+                        'population' => 'taxonomy',
+                        'source' => 'category',
+                        'limit' => 100,
                     ),
                 ),
             )
