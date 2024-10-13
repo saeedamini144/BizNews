@@ -93,8 +93,24 @@ $options = array(
                         'source' => 'category',
                         'limit' => 100,
                     ),
+
                 ),
-            )
-        )
+            ),
+
+            'Featured_News_Section' => array(
+                'title' => __('Featured News Section', '{domain}'),
+                'options' => array(
+
+                    'Featured_News' => array(
+                        'label' => __('Choose category', '{domain}'),
+                        'type' => 'multi-select',
+                        'desc' => 'Choose category to show in Featur News Sections',
+                        'population' => 'taxonomy',
+                        'source' => 'category',
+                        'limit' => 100,
+                    ),
+                ),
+            ),
+        ),
     ),
 );
