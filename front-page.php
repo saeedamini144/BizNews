@@ -5,6 +5,8 @@ $Breaking_news_title = fw_get_db_customizer_option('Breaking_news_title');
 $Featured_News_title = fw_get_db_customizer_option('Featured_News_title');
 $Latest_News_title = fw_get_db_customizer_option('Latest_News_title');
 $Banner_main_ads_one = fw_get_db_customizer_option('Banner_main_ads_one');
+$Banner_main_ads_two = fw_get_db_customizer_option('Banner_main_ads_two');
+
 ?>
 <!-- Main News Slider Start -->
 <div class="container-fluid">
@@ -131,10 +133,15 @@ $Banner_main_ads_one = fw_get_db_customizer_option('Banner_main_ads_one');
 
                         <!-- Banner_main_ads_one -->
                         <div class="col-lg-12 mb-3">
-                            <a href=""><img class="img-fluid w-100" src="<?php bloginfo('template_url') ?>/img/ads-728x90.png" alt="" /></a>
+                            <a href=""><img class="img-fluid w-100" src="<?php if (!empty($Banner_main_ads_two)) {
+                                                                                echo $Banner_main_ads_two['url'];
+                                                                            } else {
+                                                                                echo 'No banner ads';
+                                                                            }
+                                                                            ?>" alt="" />
+                            </a>
                         </div>
                         <!-- Banner_main_ads_one -->
-
 
                         <div class="col-lg-12">
                             <div class="row news-lg mx-0 mb-3">

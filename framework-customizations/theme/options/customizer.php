@@ -166,6 +166,15 @@ $options = array(
                         'source' => 'category',
                         'limit' => 100,
                     ),
+
+                    'Banner_main_ads_two' => array(
+                        'label' => __('Upload The adds Banner', '{domain}'),
+                        'type' => 'upload',
+                        // 'attr'  => array('class' => 'img-fluid'),
+                        'desc' => __('Upload The ads baner', '{domain}'),
+                        'help' => __('Banner Size 728x90', '{domain}'),
+                        'images_only' => true,
+                    ),
                 ),
             ),
         ),
