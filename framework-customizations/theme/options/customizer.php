@@ -153,6 +153,21 @@ $options = array(
                     ),
                 ),
             ),
+
+            'Middle_section' => array(
+                'title' => __('Middle Section Edite', '{domain}'),
+                'options' => array(
+
+                    'middle_content' => array(
+                        'label' => __('choose middle section content', '{domian}'),
+                        'desc' => __('choose the category', '{domain}'),
+                        'type' => 'multi-select',
+                        'population' => 'taxonomy',
+                        'source' => 'category',
+                        'limit' => 100,
+                    ),
+                ),
+            ),
         ),
     ),
 );
