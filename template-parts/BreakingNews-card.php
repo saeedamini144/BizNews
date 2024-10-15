@@ -26,7 +26,7 @@ if (!empty($Breaking_news)) {
             <div class="text-truncate">
                 <a
                     class="text-white text-uppercase font-weight-semi-bold"
-                    href="<?php the_permalink(); ?>"><?php the_title() ?></a>
+                    href="<?php the_permalink(); ?>"><?php echo wp_trim_words(get_the_title(), 15); ?></a>
             </div>
 
 <?php

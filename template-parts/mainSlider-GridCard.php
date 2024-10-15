@@ -40,7 +40,7 @@ if (!empty($Main_slider_GridCard)) {
                         </div>
                         <a
                             class="h6 m-0 text-white text-uppercase font-weight-semi-bold"
-                            href="<?php the_permalink() ?>"><?php the_title() ?></a>
+                            href="<?php the_permalink() ?>"><?php echo wp_trim_words(get_the_title(), 10); ?></a>
                     </div>
                 </div>
             </div>

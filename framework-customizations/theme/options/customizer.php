@@ -67,7 +67,7 @@ $options = array(
                 'options' => array(
 
                     'Main_slider' => array(
-                        'label' => 'Change the Main Slider Content',
+                        'label' => __('Change the Main Slider Content', '{domain}'),
                         'type' => 'multi-select',
                         'desc' => 'Choose the categories',
                         'population' => 'taxonomy', // type of the content
@@ -76,9 +76,9 @@ $options = array(
                     ),
 
                     'Main_slider_GridCard' => array(
-                        'label' => ' Change the Main Slider Grid content ',
+                        'label' => __(' Change the Main Slider Grid content ', '{domain}'),
                         'type' => 'multi-select',
-                        'desc' => 'Choose the categories',
+                        'desc' => __('Choose the categories', '{domain}'),
                         'population' => 'taxonomy',
                         'source' => 'category',
                         'limit' => 100,
@@ -86,12 +86,18 @@ $options = array(
 
                     'Breaking_news' => array(
 
-                        'label' => 'Choose the Breaking News',
+                        'label' => __('Choose the Breaking News', '{domain}'),
                         'type' => 'multi-select',
-                        'desc' => 'Choose category for the Breaking News',
+                        'desc' => __('Choose category for the Breaking News', '{domain}'),
                         'population' => 'taxonomy',
                         'source' => 'category',
                         'limit' => 100,
+                    ),
+
+                    'Breaking_news_title' => array(
+                        'label' => __('Change the Title', '{doamin}'),
+                        'type' => 'text',
+                        'desc' => __('can change the title', '{domain}'),
                     ),
 
                 ),
@@ -104,10 +110,46 @@ $options = array(
                     'Featured_News' => array(
                         'label' => __('Choose category', '{domain}'),
                         'type' => 'multi-select',
-                        'desc' => 'Choose category to show in Featur News Sections',
+                        'desc' => __('Choose category to show in Featur News Sections', '{domain}'),
                         'population' => 'taxonomy',
                         'source' => 'category',
                         'limit' => 100,
+                    ),
+
+                    'Featured_News_title' => array(
+                        'label' => __('Change the title', '{domain}'),
+                        'type' => 'text',
+                        'desc' => __('can change the title', '{domain}'),
+                    ),
+                ),
+            ),
+
+            'Latest_News_Section' => array(
+                'title' => __('Latest News Section', '{domain}'),
+                'options' => array(
+
+                    'Latest_News_title' => array(
+                        'label' => __('Change The title', '{domain}'),
+                        'type' => 'text',
+                        'desc' => __('You can change the title', '{domain}'),
+                    ),
+
+                    'Latest_News' => array(
+                        'label' => __('Choose the category to show', '{domain}'),
+                        'type' => 'multi-select',
+                        'desc' => __('Choose the category to show ', '{domain}'),
+                        'population' => 'taxonomy',
+                        'source' => 'category',
+                        'limit' => 100,
+                    ),
+
+                    'Banner_main_ads_one' => array(
+                        'label' => __('Upload The adds Banner', '{domain}'),
+                        'type' => 'upload',
+                        // 'attr'  => array('class' => 'img-fluid'),
+                        'desc' => __('Upload The ads baner', '{domain}'),
+                        'help' => __('Banner Size 728x90', '{domain}'),
+                        'images_only' => true,
                     ),
                 ),
             ),

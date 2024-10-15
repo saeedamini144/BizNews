@@ -34,7 +34,7 @@ if ($args->have_posts()) {
                     <span class="text-white" href=""><?php echo get_the_date('M d, Y'); ?></span>
                 </div>
                 <a class="h2 m-0 text-white text-uppercase font-weight-bold" href="<?php echo get_permalink(); ?>">
-                    <?php echo get_the_title(); ?>
+                    <?php echo wp_trim_words(get_the_title(), 10); ?>
                 </a>
             </div>
         </div>
