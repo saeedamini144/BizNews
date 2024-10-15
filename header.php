@@ -3,7 +3,6 @@
 
 <head>
     <meta charset="utf-8" />
-    <!-- <title>BizNews - Free News Website Template</title> -->
     <meta charset="<?php bloginfo('charset') ?>">
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <meta content="Free HTML Templates" name="keywords" />
@@ -83,26 +82,21 @@
         </div>
         <div class="row align-items-center bg-white py-3 px-lg-5">
             <div class="col-lg-4">
-                <a href="index.html" class="navbar-brand p-0 d-none d-lg-block">
-                    <figure>
-                        <?php
-                        $custom_logo_id = get_theme_mod('custom_logo');
-                        $logo = wp_get_attachment_image_url($custom_logo_id);
-                        if (has_custom_logo()) {
-                        ?>
-                            <a href="<?php home_url() ?>"><img src="<?php echo esc_url($logo) ?>" alt="<?php get_bloginfo('name') ?>"></a>
-                            <!-- <?php var_dump($logo) ?> -->
-                        <?php
-                        } else {
-                            echo get_bloginfo('name');
-                        }
+                <figure>
+                    <?php
+                    $custom_logo_id = get_theme_mod('custom_logo');
+                    $logo = wp_get_attachment_image_url($custom_logo_id);
+                    if (has_custom_logo()) {
+                    ?>
+                        <a href="<?php home_url(); ?>"><img src="<?php echo esc_url($logo) ?>" alt="<?php get_bloginfo('name') ?>"></a>
+                        <!-- <?php var_dump($logo) ?> -->
+                    <?php
+                    } else {
+                        echo get_bloginfo('name');
+                    }
 
-                        ?>
-                    </figure>
-                    <!-- <h1 class="m-0 display-4 text-uppercase text-primary">
-                        Biz<span class="text-secondary font-weight-normal">News</span>
-                    </h1> -->
-                </a>
+                    ?>
+                </figure>
             </div>
             <div class="col-lg-8 text-center text-lg-right">
                 <a href="#">
