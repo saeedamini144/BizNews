@@ -129,10 +129,10 @@ $Banner_main_ads_two = fw_get_db_customizer_option('Banner_main_ads_two');
                         <!-- Banner_main_ads_one -->
 
                         <!-- Middle section content -->
-                        <?php get_template_part('template-parts/horizontalPost', 'card') ?>
+                        <?php get_template_part('/template-parts/horizontalPost', 'card') ?>
                         <!-- Middle section content -->
 
-                        <!-- Banner_main_ads_one -->
+                        <!-- Banner_main_ads_two -->
                         <div class="col-lg-12 mb-3">
                             <a href=""><img class="img-fluid w-100" src="<?php if (!empty($Banner_main_ads_two)) {
                                                                                 echo $Banner_main_ads_two['url'];
@@ -142,17 +142,17 @@ $Banner_main_ads_two = fw_get_db_customizer_option('Banner_main_ads_two');
                                                                             ?>" alt="" />
                             </a>
                         </div>
-                        <!-- Banner_main_ads_one -->
+                        <!-- Banner_main_ads_two -->
 
                         <!-- Last section content-->
-                        <?php get_template_part('/template-parts/horizontalTwoDesign', 'card') ?>
+                        <?php get_template_part('/template-parts/hTwoDesign', 'card'); ?>
                         <!-- Last section content -->
 
                     </div>
                 </div>
 
                 <!-- News Sidebar -->
-                <?php get_template_part('template-parts/sidbar', 'main') ?>
+                <?php get_template_part('/template-parts/sidbar', 'main') ?>
                 <!-- News Sidebar -->
 
             </div>

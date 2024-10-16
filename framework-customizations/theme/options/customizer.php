@@ -1,6 +1,6 @@
 <?php
 $options = array(
-    'Header Settings' => array(
+    'Header_Settings' => array(
         'title' => __('Header Setting', '{domain}'),
         'options' => array(
 
@@ -58,7 +58,8 @@ $options = array(
         ),
 
     ),
-    'Home Edite' => array(
+
+    'Home_Edite' => array(
         'title' =>  __('Home Edit', '{domain}'),
 
         'options' => array(
@@ -177,6 +178,26 @@ $options = array(
                     ),
                 ),
             ),
+
+            'Last_section' => array(
+                'title' => __('Last Section', '{domain}'),
+                'options' => array(
+
+                    'Last_content' => array(
+                        'label' => __('choose middle section content', '{domian}'),
+                        'desc' => __('choose the category', '{domain}'),
+                        'type' => 'multi-select',
+                        'population' => 'taxonomy',
+                        'source' => 'category',
+                        'limit' => 100,
+                    ),
+                ),
+            ),
         ),
+    ),
+
+    'Footer_Settings' => array(
+        'title' => __('Footer Settings', '{domain}'),
+        'options' => array(),
     ),
 );
