@@ -28,7 +28,7 @@
     ?>
                  <div class="col-lg-12">
                      <div class="row news-lg mx-0 mb-3">
-                         <div class="col-md-6 h-100 px-0">
+                         <div class="col-md-6 h-100 px-0 bg-white">
                              <img
                                  class="img-fluid h-100"
                                  src="<?php echo the_post_thumbnail_url(); ?>"
