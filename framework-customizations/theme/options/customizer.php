@@ -1,4 +1,7 @@
 <?php
+
+use function PHPSTORM_META\type;
+
 $options = array(
     'Header_Settings' => array(
         'title' => __('Header Setting', '{domain}'),
@@ -198,6 +201,55 @@ $options = array(
 
     'Footer_Settings' => array(
         'title' => __('Footer Settings', '{domain}'),
-        'options' => array(),
+        'options' => array(
+
+            'Foooter_column_one' => array(
+                'title' => __('Column One', '{domain}'),
+                'options' => array(
+
+                    'column_one_title' => array(
+                        'label' => __('Colimn one title', '{domain}'),
+                        'desc' => __('Change column title', '{domain}'),
+                        'type' => 'text',
+                        'value' => '',
+                    ),
+
+                    'contact_list' => array(
+
+                        'label' => __('Contact List', '{domain}'),
+                        'type' => 'addable-box',
+                        'desc' => __('choose icon and content', '{domain}'),
+                        'box-options' => array(
+
+                            'contact_list_icon' => array(
+
+                                'type' => 'icon-v2',
+                                'preview_size' => 'small',
+                                'model_size' => 'small',
+                                'desc' => __('Choose the icon', '{domian}'),
+                                // 'set'   => 'font-awesome', // فقط Font Awesome را برای انتخاب کاربر نمایش می‌دهد
+                            ),
+
+                            'contact_list_content' => array(
+
+                                'label' => __('write the content', '{domain}'),
+                                'type' => 'wp-editor',
+                                'size' => 'small', // small, large
+                                'editor_height' => 150,
+                                'wpautop' => true,
+                                'editor_type' => true, // tinymce, html
+                                'shortcodes' => false // true, array('button', map')
+                            ),
+
+                        ),
+                        'template' => 'add contact {{- contact_list_icon}}',
+                        'add-button-text' => __('add new list', '{domain}'),
+                        'sortable' => true,
+
+                    ),
+                ),
+
+            ),
+        ),
     ),
 );

@@ -17,6 +17,9 @@ add_action('after_setup_theme', 'register_TGM');
 // end TGm
 
 
+add_filter('fw:option_type:icon-v2:filter_packs', '_custom_packs_list');
+
+
 function theme_support_BizNews()
 {
     add_theme_support('title-tag'); //dynamic site title
@@ -99,3 +102,17 @@ class Custom_Navwalker extends Walker_Nav_Menu
         $output .= "</li>\n";
     }
 }
+
+
+//call fontawsome to show the template
+
+function _custom_packs_list($current_packs)
+{
+    /**
+     * $current_packs is an array of pack names.
+     * You should return which one you would like to show in the picker.
+     */
+    return array('font-awesome');
+}
+
+add_filter('fw:option_type:icon-v2:filter_packs', '_custom_packs_list');

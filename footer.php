@@ -1,11 +1,37 @@
   <!-- Footer Start -->
+  <?php
+
+    $column_one_title = fw_get_db_customizer_option('column_one_title');
+    $contact_list = fw_get_db_customizer_option('contact_list');
+
+    ?>
   <div class="container-fluid bg-dark pt-5 px-sm-3 px-md-5 mt-5">
       <div class="row py-4">
           <div class="col-lg-3 col-md-6 mb-5">
-              <h5 class="mb-4 text-white text-uppercase font-weight-bold">Get In Touch</h5>
-              <p class="font-weight-medium"><i class="fa fa-map-marker-alt mr-2"></i>123 Street, New York, USA</p>
-              <p class="font-weight-medium"><i class="fa fa-phone-alt mr-2"></i>+012 345 67890</p>
-              <p class="font-weight-medium"><i class="fa fa-envelope mr-2"></i>info@example.com</p>
+              <h5 class="mb-4 text-white text-uppercase font-weight-bold"><?php echo $column_one_title ?></h5>
+
+              <?php
+                if (!empty($contact_list)) {
+                    foreach ($contact_list as $data_list) {
+                        // var_dump($data_list['contact_list_icon']);
+                ?>
+                      <div Class="font-weight-medium d-flex">
+                          <i class=" <?php if (!empty($data_list['contact_list_icon']['icon-class'])) {
+                                            echo htmlspecialchars($data_list['contact_list_icon']['icon-class']);
+                                        } else {
+                                            echo '';
+                                        };
+
+                                        ?> mr-2"></i>
+                          <?php echo $data_list['contact_list_content']; ?>
+                      </div>
+              <?php
+                    }
+                } else {
+                    echo ' ';
+                }
+                ?>
+
               <h6 class="mt-4 mb-3 text-white text-uppercase font-weight-bold">Follow Us</h6>
               <div class="d-flex justify-content-start">
                   <a class="btn btn-lg btn-secondary btn-lg-square mr-2" href="#"><i class="fab fa-twitter"></i></a>
