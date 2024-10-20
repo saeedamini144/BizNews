@@ -116,3 +116,34 @@ function _custom_packs_list($current_packs)
 }
 
 add_filter('fw:option_type:icon-v2:filter_packs', '_custom_packs_list');
+
+
+
+
+// function my_customizer_save($wp_customize)
+// {
+//     $footer_gallery = fw_get_db_settings_option('footer_gallery');
+
+//     if (empty($footer_gallery)) {
+//         // اگر تصاویر حذف شده‌اند، آن‌ها را از دیتابیس حذف کن
+//         fw_delete_db_settings_option('footer_gallery');
+//     } else {
+//         // در غیر این صورت، تغییرات جدید را ذخیره کن
+//         fw_set_db_settings_option('footer_gallery', $footer_gallery);
+//     }
+// }
+// add_action('customize_save_after', 'my_customizer_save');
+
+
+
+// function clean_footer_gallery_images($footer_gallery)
+// {
+//     if (is_array($footer_gallery)) {
+//         return array_filter($footer_gallery, function ($image) {
+//             return !empty($image['url']);
+//         });
+//     }
+//     return array();
+// }
+
+// add_filter('fw_option_footer_gallery', 'clean_footer_gallery_images');

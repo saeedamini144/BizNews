@@ -7,7 +7,7 @@ $options = array(
         'title' => __('Header Setting', '{domain}'),
         'options' => array(
 
-            'Banner Header' => array(
+            'Banner_Header' => array(
                 'title' => __('Edit The Header Banner', '{domain}'),
                 'options' => array(
 
@@ -24,7 +24,7 @@ $options = array(
                 ),
             ),
 
-            'Social Icon' => array(
+            'Social_Icon' => array(
                 'title' => __("Social Icon", '{domain}'),
                 'options' => array(
 
@@ -36,9 +36,12 @@ $options = array(
                         'box-options' => array(
                             'icon_Name' => array(
 
-                                'label' => __('Icon name', '{domain}'),
+                                'label' => __('Choose icon', '{domain}'),
                                 'type' => 'text',
-                                'help' => __('Use fontawsome', '{domian}'),
+                                // 'preview_size' => 'small',
+                                // 'model_size' => 'small',
+                                'desc' => __('Use the fontawsome icon name', '{domian}'),
+                                // 'set'   => 'font-awesome', // فقط Font Awesome را برای انتخاب کاربر نمایش می‌دهد
 
                             ),
 
@@ -222,7 +225,7 @@ $options = array(
                         'box-options' => array(
 
                             'contact_list_icon' => array(
-
+                                'label' => __('Choose the icon', '{domian}'),
                                 'type' => 'icon-v2',
                                 'preview_size' => 'small',
                                 'model_size' => 'small',
@@ -247,8 +250,134 @@ $options = array(
                         'sortable' => true,
 
                     ),
+
+                    'Social_title' => array(
+
+                        'label' => __('social title', '{domain}'),
+                        'type' => 'text',
+                        'desc' => __('write the social title', '{domain}'),
+
+                    ),
+
+                    'social_icon_footer' => array(
+
+                        'label' => __('add the social icon', '{domian}'),
+                        'type' => 'addable-box',
+                        'desc' => __('choose the icon and add link', '{domain}'),
+                        'box-options' => array(
+
+                            'social_icon' => array(
+
+                                'label' => __('choose the social icon', '{domain}'),
+                                'type' => 'icon-v2',
+                                'preview_size' => 'small',
+                                // 'icon-class-without-root' => false,
+
+                                'model_size' => 'small',
+                                'desc' => __('use the font awsome', '{domain}'),
+
+                            ),
+
+                            'social_icon_link' => array(
+
+                                'label' => __('add the social link', '{domain}'),
+                                'type' => 'text',
+                                'desc' => __('add the social medi link to the icon'),
+
+                            ),
+
+                        ),
+                        'template' => 'add contact {{- social_icon}}',
+                        'add-button-text' => __('add new social icon', '{domain}'),
+                        'sortable' => true,
+
+
+                    ),
                 ),
 
+            ),
+
+            'Footer_column_two' => array(
+
+                'title' => __('Column two', '{domain}'),
+                'options' => array(
+
+                    'Footer_column_two_title' => array(
+
+                        'label' => __('add the title', '{domain}'),
+                        'type' => 'text',
+                        'desc' => __('change the title name of the column two', '{domain}'),
+
+                    ),
+
+                    'choose_category' => array(
+
+                        'label' => __('Choose the category', '{domain}'),
+                        'type' => 'multi-select',
+                        'desc' => __('Choose the category to show the in footer', '{domain}'),
+                        'population' => 'taxonomy',
+                        'source' => 'category',
+                        'limit' => 3
+
+                    ),
+                ),
+
+            ),
+
+            'Footer_column_three' => array(
+
+                'title' => __('Column three'),
+                'options' => array(
+
+                    'Footer_column_three_title' => array(
+
+                        'label' => __('add the title', '{domain}'),
+                        'type' => 'text',
+                        'desc' => __('change the title name of the column two', '{domain}'),
+                    ),
+
+                ),
+
+            ),
+
+            'Footer_column_four' => array(
+
+                'title' => __('Column four'),
+                'options' => array(
+
+                    'Footer_column_four_title' => array(
+
+                        'label' => __('add the title', '{domain}'),
+                        'type' => 'text',
+                        'desc' => __('change the title name of the column two', '{domain}'),
+                    ),
+
+                    'footer_gallery' => array(
+                        'label' => __('choose photos', '{domain}'),
+                        'type' => 'multi-upload',
+                        'value' => array(),
+                        'desc' => __('Choose the gallery images', '{domain}'),
+                        'images_only' => true,
+                    ),
+
+
+                ),
+
+            ),
+
+            'Footer_copyright' => array(
+                'title' => __('copyright', '{domain}'),
+                'options' => array(
+
+                    'change_copyright' => array(
+
+                        'label' => __('add copyright content', '{domain}'),
+                        'type' => 'wp-editor',
+                        'desc' => __('change the copyright content', 'domain'),
+
+                    ),
+
+                ),
             ),
         ),
     ),
