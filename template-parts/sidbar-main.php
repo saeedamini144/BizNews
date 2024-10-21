@@ -1,6 +1,6 @@
 <div class="col-lg-4">
     <!-- Social Follow Start -->
-    <div class="mb-3">
+    <!-- <div class="mb-3">
         <div class="section-title mb-0">
             <h4 class="m-0 text-uppercase font-weight-bold">Follow Us</h4>
         </div>
@@ -60,7 +60,7 @@
                 <span class="font-weight-medium">12,345 Followers</span>
             </a>
         </div>
-    </div>
+    </div> -->
     <!-- Social Follow End -->
 
     <!-- Ads Start -->
