@@ -65,7 +65,7 @@ $options = array(
 
     ),
 
-    'Home_Edite' => array(
+    'Home_Settings' => array(
         'title' =>  __('Home Edit', '{domain}'),
 
         'options' => array(
@@ -76,7 +76,7 @@ $options = array(
                     'Main_slider' => array(
                         'label' => __('Change the Main Slider Content', '{domain}'),
                         'type' => 'multi-select',
-                        'desc' => 'Choose the categories',
+                        'desc' => __('Choose the categories', '{domain}'),
                         'population' => 'taxonomy', // type of the content
                         'source' => 'category', //categorie
                         'limit' => 100,
@@ -379,6 +379,48 @@ $options = array(
 
                 ),
             ),
+        ),
+    ),
+
+    'sidebar_Settings' => array(
+        'title' => __('Sidbar Settings', '{domain}'),
+        'options' => array(
+
+            'add_title' => array(
+                'label' => __('adds section title', '{domain}'),
+                'type' => 'text',
+                'desc' => __('change the adds title', '{domain}')
+            ),
+
+            'sidbar_banner_adds' => array(
+                'label' => __('Ipload the image', '{domain}'),
+                'desc' => __('Advertisment image', '{domain}'),
+                'help' => __('Upload 410*250 pix image'),
+                'type' => 'upload',
+                'images_only' => true,
+            ),
+
+            'trending_sidbar' => array(
+                'label' => __('trending section title', '{domain}'),
+                'type' => 'text',
+                'desc' => __('change the trending title', '{domain}'),
+            ),
+
+            'trending_news_category' => array(
+                'label' => __('Choose the category', '{doamin}'),
+                'type' => 'multi-select',
+                'desc' => __('choose the category to show in trending section', '{domain}'),
+                'population' => 'taxonomy',
+                'source' => 'category',
+                'limit' => 100,
+            ),
+
+            'show_category' => array(
+                'label' => __('change the title', '{domain}'),
+                'type' => 'text',
+                'desc' => __('change the title of the all category section', '{domain}'),
+            ),
+
         ),
     ),
 );

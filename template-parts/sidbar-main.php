@@ -1,3 +1,11 @@
+<?php
+
+$add_title = fw_get_db_customizer_option('add_title');
+$sidbar_banner_adds = fw_get_db_customizer_option('sidbar_banner_adds');
+$trending_sidbar = fw_get_db_customizer_option('trending_sidbar');
+$show_category = fw_get_db_customizer_option('show_category');
+?>
+
 <div class="col-lg-4">
     <!-- Social Follow Start -->
     <!-- <div class="mb-3">
@@ -66,12 +74,12 @@
     <!-- Ads Start -->
     <div class="mb-3">
         <div class="section-title mb-0">
-            <h4 class="m-0 text-uppercase font-weight-bold">Advertisement</h4>
+            <h4 class="m-0 text-uppercase font-weight-bold"><?php echo $add_title ?></h4>
         </div>
         <div class="bg-white text-center border border-top-0 p-3">
             <a href=""><img
                     class="img-fluid"
-                    src="<?php bloginfo('template_url') ?>/img/news-800x500-2.jpg"
+                    src="<?php echo $sidbar_banner_adds['url'] ?>"
                     alt="" /></a>
         </div>
     </div>
@@ -80,109 +88,14 @@
     <!-- Popular News Start -->
     <div class="mb-3">
         <div class="section-title mb-0">
-            <h4 class="m-0 text-uppercase font-weight-bold">Tranding News</h4>
+            <h4 class="m-0 text-uppercase font-weight-bold"><?php echo $trending_sidbar ?></h4>
         </div>
         <div class="bg-white border border-top-0 p-3">
-            <div
-                class="d-flex align-items-center bg-white mb-3"
-                style="height: 110px">
-                <img
-                    class="img-fluid"
-                    src="<?php bloginfo('template_url') ?>/img/news-110x110-1.jpg"
-                    alt="" />
-                <div
-                    class="w-100 h-100 px-3 d-flex flex-column justify-content-center border border-left-0">
-                    <div class="mb-2">
-                        <a
-                            class="badge badge-primary text-uppercase font-weight-semi-bold p-1 mr-2"
-                            href="">Business</a>
-                        <a class="text-body" href=""><small>Jan 01, 2045</small></a>
-                    </div>
-                    <a
-                        class="h6 m-0 text-secondary text-uppercase font-weight-bold"
-                        href="">Lorem ipsum dolor sit amet elit...</a>
-                </div>
-            </div>
-            <div
-                class="d-flex align-items-center bg-white mb-3"
-                style="height: 110px">
-                <img
-                    class="img-fluid"
-                    src="<?php bloginfo('template_url') ?>/img/news-110x110-2.jpg"
-                    alt="" />
-                <div
-                    class="w-100 h-100 px-3 d-flex flex-column justify-content-center border border-left-0">
-                    <div class="mb-2">
-                        <a
-                            class="badge badge-primary text-uppercase font-weight-semi-bold p-1 mr-2"
-                            href="">Business</a>
-                        <a class="text-body" href=""><small>Jan 01, 2045</small></a>
-                    </div>
-                    <a
-                        class="h6 m-0 text-secondary text-uppercase font-weight-bold"
-                        href="">Lorem ipsum dolor sit amet elit...</a>
-                </div>
-            </div>
-            <div
-                class="d-flex align-items-center bg-white mb-3"
-                style="height: 110px">
-                <img
-                    class="img-fluid"
-                    src="<?php bloginfo('template_url') ?>/img/news-110x110-3.jpg"
-                    alt="" />
-                <div
-                    class="w-100 h-100 px-3 d-flex flex-column justify-content-center border border-left-0">
-                    <div class="mb-2">
-                        <a
-                            class="badge badge-primary text-uppercase font-weight-semi-bold p-1 mr-2"
-                            href="">Business</a>
-                        <a class="text-body" href=""><small>Jan 01, 2045</small></a>
-                    </div>
-                    <a
-                        class="h6 m-0 text-secondary text-uppercase font-weight-bold"
-                        href="">Lorem ipsum dolor sit amet elit...</a>
-                </div>
-            </div>
-            <div
-                class="d-flex align-items-center bg-white mb-3"
-                style="height: 110px">
-                <img
-                    class="img-fluid"
-                    src="<?php bloginfo('template_url') ?>/img/news-110x110-4.jpg"
-                    alt="" />
-                <div
-                    class="w-100 h-100 px-3 d-flex flex-column justify-content-center border border-left-0">
-                    <div class="mb-2">
-                        <a
-                            class="badge badge-primary text-uppercase font-weight-semi-bold p-1 mr-2"
-                            href="">Business</a>
-                        <a class="text-body" href=""><small>Jan 01, 2045</small></a>
-                    </div>
-                    <a
-                        class="h6 m-0 text-secondary text-uppercase font-weight-bold"
-                        href="">Lorem ipsum dolor sit amet elit...</a>
-                </div>
-            </div>
-            <div
-                class="d-flex align-items-center bg-white mb-3"
-                style="height: 110px">
-                <img
-                    class="img-fluid"
-                    src="<?php bloginfo('template_url') ?>/img/news-110x110-5.jpg"
-                    alt="" />
-                <div
-                    class="w-100 h-100 px-3 d-flex flex-column justify-content-center border border-left-0">
-                    <div class="mb-2">
-                        <a
-                            class="badge badge-primary text-uppercase font-weight-semi-bold p-1 mr-2"
-                            href="">Business</a>
-                        <a class="text-body" href=""><small>Jan 01, 2045</small></a>
-                    </div>
-                    <a
-                        class="h6 m-0 text-secondary text-uppercase font-weight-bold"
-                        href="">Lorem ipsum dolor sit amet elit...</a>
-                </div>
-            </div>
+
+            <!-- trending News  -->
+            <?php get_template_part('/template-parts/sidbar', 'singlePost') ?>
+            <!-- trending News -->
+
         </div>
     </div>
     <!-- Popular News End -->
@@ -210,25 +123,30 @@
     </div>
     <!-- Newsletter End -->
 
-    <!-- Tags Start -->
+    <!-- category Start -->
     <div class="mb-3">
         <div class="section-title mb-0">
-            <h4 class="m-0 text-uppercase font-weight-bold">Tags</h4>
+            <h4 class="m-0 text-uppercase font-weight-bold"><?php echo $show_category ?></h4>
         </div>
         <div class="bg-white border border-top-0 p-3">
             <div class="d-flex flex-wrap m-n1">
-                <a href="" class="btn btn-sm btn-outline-secondary m-1">Politics</a>
-                <a href="" class="btn btn-sm btn-outline-secondary m-1">Business</a>
-                <a href="" class="btn btn-sm btn-outline-secondary m-1">Corporate</a>
-                <a href="" class="btn btn-sm btn-outline-secondary m-1">Business</a>
-                <a href="" class="btn btn-sm btn-outline-secondary m-1">Health</a>
-                <a href="" class="btn btn-sm btn-outline-secondary m-1">Education</a>
-                <a href="" class="btn btn-sm btn-outline-secondary m-1">Science</a>
-                <a href="" class="btn btn-sm btn-outline-secondary m-1">Business</a>
-                <a href="" class="btn btn-sm btn-outline-secondary m-1">Foods</a>
-                <a href="" class="btn btn-sm btn-outline-secondary m-1">Travel</a>
+                <?php
+
+                $categories = get_categories();
+                if (!empty($categories)) {
+                    foreach ($categories as $category) {
+                ?>
+                        <a href="<?php echo esc_html($category->link)  ?>" class="btn btn-sm btn-outline-secondary m-1"><?php echo esc_html($category->name) ?></a>
+
+                <?php
+                    }
+                } else {
+                    echo '';
+                }
+
+                ?>
             </div>
         </div>
     </div>
-    <!-- Tags End -->
+    <!-- category End -->
 </div>
