@@ -39,6 +39,7 @@ get_header();
                                 } else {
                                     echo 'No post found';
                                 }
+                                wp_reset_postdata();
                                 ?>
                                 <!--  content  -->
                             </div>
@@ -69,6 +70,9 @@ get_header();
 
                     </div>
                 </div>
+            </div>
+            <div>
+                <?php the_archive_description('<div class="taxonomy-description">', '</div>') ?>
             </div>
         </div>
     </div>
