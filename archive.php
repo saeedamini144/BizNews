@@ -71,7 +71,8 @@ get_header();
                 </div>
             </div>
         </div>
-        <!-- News With Sidebar End -->
+    </div>
+    <!-- News With Sidebar End -->
 
 </body>
 <?php
