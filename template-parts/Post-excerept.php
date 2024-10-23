@@ -1,4 +1,4 @@
-<div class="col-lg-6">
+<div class="col-l-6 col-lg-4">
     <div class="position-relative mb-3">
         <img
             class="img-fluid w-100"
@@ -13,7 +13,7 @@
             </div>
             <a
                 class="h4 d-block mb-3 text-secondary text-uppercase font-weight-bold"
-                href="<?php the_permalink() ?>"><?php echo wp_trim_words(get_the_title(), 10); ?></a>
+                href="<?php the_permalink() ?>"><?php echo wp_trim_words(get_the_title(), 7, '...'); ?></a>
             <p class="m-0">
                 <?php echo wp_trim_words(get_the_excerpt(), 15, '...'); ?>
             </p>

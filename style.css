@@ -9832,3 +9832,36 @@ Use it to make something cool, have fun, and share what you've learned with othe
       top: 0;
   }
 }
+/* pagination */
+.pagination{
+  margin: auto;
+}
+.page-numbers{
+  padding: 10px;
+}
+/* .page-numbers .current{
+  background-color:var(--warning)  !important;
+  color: var(--dark) !important;
+    border-radius: 5px !important;
+    padding: 10px 15px !important;
+} */
+ .pagination a {
+    color: #000; /* Your desired text color */
+    background-color: #f0f0f0; /* Your desired background color */
+    padding: 5px 10px; /* Adjust padding as needed */
+    border-radius: 5px; /* Add rounded corners */
+    margin: 5px; /* Adjust margins as needed */
+}
+
+/* Style the current page link differently */
+.pagination .current {
+    font-weight: bold;
+    background-color: var(--warning); /* Your desired background color for the current page */
+    color: #fff; /* Your desired text color for the current page */
+}
+
+/* Style the navigation arrows if your pagination includes them */
+.pagination .next,
+.pagination .prev {
+    /* Your styles for the next and previous links */
+}
