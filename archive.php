@@ -12,18 +12,19 @@ get_header();
                     <div class="row">
                         <div class="col-12">
                             <div class="section-title">
-                                <h4 class="m-0 text-uppercase font-weight-bold"><?php
-                                                                                if (is_category()) {
-                                                                                    echo get_the_category()[0]->name;
-                                                                                } elseif (is_tag()) {
-                                                                                    echo get_the_tags()[0]->name;
-                                                                                } elseif (is_search()) {
-                                                                                    echo 'Search for: ' . esc_html($_GET['s']);
-                                                                                } else {
-                                                                                    'Nothing Found';
-                                                                                }
+                                <h4 class="m-0 text-uppercase font-weight-bold">
+                                    <?php
+                                    if (is_category()) {
+                                        echo get_the_category()[0]->name;
+                                    } elseif (is_tag()) {
+                                        echo get_the_tags()[0]->name;
+                                    } elseif (is_search()) {
+                                        echo 'Search for: ' . esc_html($_GET['s']);
+                                    } else {
+                                        'Nothing Found';
+                                    }
 
-                                                                                ?>
+                                    ?>
                                 </h4>
                                 <!-- <a class="text-secondary font-weight-medium text-decoration-none" href="">View All</a> -->
                             </div>
