@@ -132,19 +132,18 @@ $show_category = fw_get_db_customizer_option('show_category');
             <div class="bg-white border border-top-0 p-3">
                 <div class="d-flex flex-wrap m-n1">
                     <?php
-
                     $categories = get_categories();
                     if (!empty($categories)) {
                         foreach ($categories as $category) {
                     ?>
-                            <a href="<?php echo esc_html($category->link)  ?>" class="btn btn-sm btn-outline-secondary m-1"><?php echo esc_html($category->name) ?></a>
-
+                            <a href="<?php echo esc_url(get_category_link($category->term_id)); ?>" class="btn btn-sm btn-outline-secondary m-1">
+                                <?php echo esc_html($category->name); ?>
+                            </a>
                     <?php
                         }
                     } else {
-                        echo '';
+                        echo 'No categories found';
                     }
-
                     ?>
                 </div>
             </div>

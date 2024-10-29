@@ -81,20 +81,18 @@
                  <!-- show all post category -->
 
                  <?php
-
                     $categories = get_categories();
-
                     if (!empty($categories)) {
                         foreach ($categories as $category) {
                     ?>
-                         <a href="<?php echo esc_html($category->link) ?>" class="btn btn-sm btn-secondary m-1"><?php echo esc_html($category->name) ?></a>
+                         <a href="<?php echo esc_url(get_category_link($category->term_id)); ?>" class="btn btn-sm btn-outline-secondary m-1">
+                             <?php echo esc_html($category->name); ?>
+                         </a>
                  <?php
-
                         }
                     } else {
-                        echo '';
+                        echo 'No categories found';
                     }
-
                     ?>
                  <!-- show all post category -->
 
