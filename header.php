@@ -9,7 +9,7 @@
     <meta content="Free HTML Templates" name="description" />
 
     <!-- Favicon -->
-    <link href="<?php bloginfo('template_url') ?>/img/favicon.ico" rel="icon" />
+    <!-- <link href="<?php bloginfo('template_url') ?>/img/favicon.ico" rel="icon" /> -->
     <?php
     wp_head(); //call The header
 
