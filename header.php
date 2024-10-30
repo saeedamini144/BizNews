@@ -153,12 +153,15 @@
                 'walker' => new WP_Bootstrap_Navwalker(), // نیاز به WP_Bootstrap_Navwalker دارید
             ));
             ?>
-            <div class="input-group ml-auto d-none d-lg-flex" style="width: 100%; max-width: 300px;">
+            <!-- <div role="search" class="input-group ml-auto d-none d-lg-flex" style="width: 100%; max-width: 300px;">
                 <input type="text" class="form-control border-0" placeholder="Keyword">
                 <div class="input-group-append">
                     <button class="input-group-text bg-primary text-dark border-0 px-3"><i class="fa fa-search"></i></button>
                 </div>
-            </div>
+            </div> -->
+            <!-- Search Input -->
+            <?php get_search_form(); ?>
+            <!-- Search Input -->
         </div>
     </nav>
     <!-- Navbar End -->
