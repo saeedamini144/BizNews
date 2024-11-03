@@ -9872,3 +9872,7 @@ Use it to make something cool, have fun, and share what you've learned with othe
     /* Your styles for the next and previous links */
 }
 
+.inner-sidbar{
+  position: sticky;
+  top: 10px;
+}
