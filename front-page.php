@@ -26,7 +26,7 @@ $Banner_main_ads_two = fw_get_db_customizer_option('Banner_main_ads_two');
             <div class="row mx-0">
 
                 <!-- show the main slider grid card -->
-                <?php get_template_part('/template-parts/mainSlider', 'Gridcard'); ?>
+                <?php get_template_part('/template-parts/mainSlider', 'GridCard'); ?>
                 <!-- show the main slider grid card -->
 
             </div>
