@@ -5,7 +5,7 @@ $Main_slider = fw_get_db_customizer_option('Main_slider');
 $args = new WP_Query(
     array(
         'post_type' => 'post',
-        'posts_per_page' => -1, // اصلاح نام پارامتر
+        'posts_per_page' => 5, // اصلاح نام پارامتر
         'orderby' => 'date',
         'order' => 'DESC',
         'tax_query' => array(
