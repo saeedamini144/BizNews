@@ -7,6 +7,13 @@ get_header();
     <div class="container-fluid">
         <div class=" container">
             <div class="row pt-5 ">
+                <div class="section-title col-lg-12 col-md-12 align-middle">
+                    <?php
+                    if (function_exists('yoast_breadcrumb')) {
+                        yoast_breadcrumb('<p id="breadcrumbs" class="mt-2">', '</p>');
+                    }
+                    ?>
+                </div>
                 <div class="col-lg-8 col-md-12">
                     <!-- News Detail Start -->
                     <div class="position-relative mb-3">

@@ -11,7 +11,7 @@ get_header();
                 <div class="col-lg-8">
                     <div class="row">
                         <div class="col-12">
-                            <div class="section-title">
+                            <div class="section-title-archive">
                                 <h4 class="m-0 text-uppercase font-weight-bold">
                                     <?php
                                     if (is_category()) {
@@ -26,6 +26,11 @@ get_header();
 
                                     ?>
                                 </h4>
+                                <?php
+                                if (function_exists('yoast_breadcrumb')) {
+                                    yoast_breadcrumb('<p id="breadcrumbs" class="mt-2">', '</p>');
+                                }
+                                ?>
                                 <!-- <a class="text-secondary font-weight-medium text-decoration-none" href="">View All</a> -->
                             </div>
 
