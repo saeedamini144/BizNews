@@ -165,6 +165,13 @@ $options = array(
                 'title' => __('Middle Section Edite', '{domain}'),
                 'options' => array(
 
+                    'middle_content_title'=>array(
+
+                        'label'=>__('write the title','{domain}'),
+                        'desc'=>__('the middle content title','{domain}'),
+                        'type'=>'text',
+                    ),
+
                     'middle_content' => array(
                         'label' => __('choose middle section content', '{domian}'),
                         'desc' => __('choose the category', '{domain}'),
@@ -189,8 +196,15 @@ $options = array(
                 'title' => __('Last Section', '{domain}'),
                 'options' => array(
 
+                    'Last_content_title'=>array(
+
+                        'label'=>__('write the title','{domain}'),
+                        'desc'=>__('the last content title','{domain}'),
+                        'type'=>'text',
+                    ),
+
                     'Last_content' => array(
-                        'label' => __('choose middle section content', '{domian}'),
+                        'label' => __('choose middle section content', '{domain}'),
                         'desc' => __('choose the category', '{domain}'),
                         'type' => 'multi-select',
                         'population' => 'taxonomy',
