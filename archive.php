@@ -14,16 +14,16 @@ get_header();
                             <div class="section-title-archive">
                                 <h4 class="m-0 text-uppercase font-weight-bold">
                                     <?php
-                                    if (is_category()) {
-                                        echo get_the_category()[0]->name;
-                                    } elseif (is_tag()) {
-                                        echo get_the_tags()[0]->name;
-                                    } elseif (is_search()) {
-                                        echo 'Search for: ' . esc_html($_GET['s']);
-                                    } else {
-                                        'Nothing Found';
+                                     if (is_category()) {
+                                        echo single_cat_title();
+                                        // var_dump(single_cat_title());
+                                    } else if (is_tag()) {
+                                        echo single_tag_title();
+                                    } else if (is_day()) {
+                                        echo  get_the_date('j F');
+                                    } else if (is_author()) {
+                                        echo  get_the_author();
                                     }
-
                                     ?>
                                 </h4>
                                 <?php
@@ -59,7 +59,7 @@ get_header();
                 <!--  Sidebar  -->
 
             </div>
-            <div class="container">
+            <div class="container-fluid">
                 <div class="row">
                     <div class="col-12">
                         <div class="section-title text-center">

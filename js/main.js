@@ -51,7 +51,7 @@
         items: 1,
         dots: false,
         loop: true,
-        nav : true,
+        nav : false,
         navText : [
             '<i class="fa fa-angle-left"></i>',
             '<i class="fa fa-angle-right"></i>'
@@ -66,7 +66,7 @@
         items: 1,
         dots: false,
         loop: true,
-        nav : true,
+        nav : false,
         navText : [
             '<i class="fa fa-angle-left" aria-hidden="true"></i>',
             '<i class="fa fa-angle-right" aria-hidden="true"></i>'
@@ -80,7 +80,7 @@
         margin: 30,
         dots: false,
         loop: true,
-        nav : true,
+        nav : false,
         navText : [
             '<i class="fa fa-angle-left" aria-hidden="true"></i>',
             '<i class="fa fa-angle-right" aria-hidden="true"></i>'
@@ -106,7 +106,7 @@
         margin: 30,
         dots: false,
         loop: true,
-        nav : true,
+        nav : false,
         navText : [
             '<i class="fa fa-angle-left" aria-hidden="true"></i>',
             '<i class="fa fa-angle-right" aria-hidden="true"></i>'
@@ -135,7 +135,7 @@
         margin: 30,
         dots: false,
         loop: true,
-        nav : true,
+        nav : false,
         navText : [
             '<i class="fa fa-angle-left" aria-hidden="true"></i>',
             '<i class="fa fa-angle-right" aria-hidden="true"></i>'
