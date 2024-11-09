@@ -32,7 +32,7 @@
                              class="img-fluid w-100"
                              src="<?php echo the_post_thumbnail_url() ?>"
                              style="object-fit: cover" />
-                         <div class="bg-white border border-top-0 p-4">
+                         <div class="bg-white border border-top-0 p-4 card-height">
                              <div class="mb-2">
                                  <a
                                      class="badge badge-primary text-uppercase font-weight-semi-bold p-2 mr-2"
